@@ -87,8 +87,8 @@ const HomeScreen = (props: any) => {
         base64 = event.target.result;
         console.log(base64Image);
       };
-
-      const apiKey = 'AIzaSyBj7D8acA5iN1Rdv9jn393MenfkvpXlhIY';
+      //add your api key here
+      const apiKey = '';
       const apiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
 
       const requestData = {
