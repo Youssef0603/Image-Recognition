@@ -1,5 +1,8 @@
 const Fonts = {
-  rubikMedium: 'Rubik-Medium',
+  regular: 'Rubik-Regular',
+  medium: 'Rubik-Medium',
+  bold: 'Rubik-Bold'
+  
 };
 
 export default Fonts;

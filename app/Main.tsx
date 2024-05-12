@@ -4,9 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useSelector} from 'react-redux';
 
 import Navigator from './Navigator';
-import {SplashScreen, ForceUpdateScreen, ErrorScreen} from './screens';
-import {LoginScreen, RegisterScreen} from './screens/user/auth';
 import {Actors} from './constants';
+import { HomeScreen } from './screens/user';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,24 +37,6 @@ const Main: React.FC<MainProps> = props => {
   }, [error]);
 
   const renderContent = () => {
-    if (!loaded) {
-      return (
-        <Stack.Navigator>
-          <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        </Stack.Navigator>
-      );
-    }
-
-    if (loaded && forceUpdate.has_update) {
-      return (
-        <Stack.Navigator>
-          <Stack.Screen
-            name="ForceUpdateScreen"
-            component={ForceUpdateScreen}
-          />
-        </Stack.Navigator>
-      );
-    }
 
     if (loaded && error.has_error && !forceUpdate.has_update) {
       return (
@@ -65,26 +46,7 @@ const Main: React.FC<MainProps> = props => {
       );
     }
 
-    // if (loaded && user === null && !forceUpdate.has_update) {
-    //   return (
-    //     <Stack.Navigator>
-    //       <Stack.Screen name="LoginScreen" component={LoginScreen} />
-    //       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-    //     </Stack.Navigator>
-    //   );
-    // }
-
-    // if (loaded && user?.actor === Actors.MAIN && !forceUpdate.has_update) {
-
-      return <Navigator />;
-      
-    // }
-
-    // Example for extending the logic, uncomment if needed
-    // if (loaded && user != null && user.actor === Actors.DRIVER && !forceUpdate.has_update) {
-    //   return <NavigatorTwo {...props} />;
-    // }
-
+    return <HomeScreen/>
     return null;
   };
 
