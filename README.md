@@ -2,9 +2,9 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 Image Recognition app built in react native using TypeScript.
 
 # Packages used: 
-"@backpackapp-io/react-native-toast",
-"react-native-svg",
-"react-native-svg-transformer",
+"@backpackapp-io/react-native-toast"
+"react-native-svg"
+"react-native-svg-transformer"
 "react-native-reanimated"
 
 # Api used:
