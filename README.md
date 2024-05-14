@@ -7,7 +7,7 @@ Image Recognition app built in react native using TypeScript.
 "react-native-svg-transformer",
 "react-native-reanimated"
 
-#Api used:
+# Api used:
 "Cloud Vision Api" from google
 
 
